@@ -8,7 +8,7 @@ public class Comercio {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
 
-    @Column(name="descricao")
+    @Column(name = "descricao")
     String descricao;
 
     public Comercio(String descricao) {
@@ -22,16 +22,10 @@ public class Comercio {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getDescricao() {
         return descricao;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
 
 }
