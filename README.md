@@ -1,5 +1,8 @@
 # e-commerce-api Project
 
+## Arquivo h2-2.1.214.jar, banco de dados embarcado para execução local
+
+
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
