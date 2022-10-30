@@ -22,7 +22,6 @@ public class Comercio {
         return id;
     }
 
-
     public String getDescricao() {
         return descricao;
     }

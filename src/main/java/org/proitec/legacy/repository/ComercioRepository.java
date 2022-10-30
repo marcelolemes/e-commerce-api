@@ -8,10 +8,10 @@ import java.util.List;
 
 @ApplicationScoped
 public class ComercioRepository implements PanacheRepository<Comercio> {
-
+    private static final String CAMPO = "descricao";
 
     public List<Comercio> findByDescricao(String descricao) {
-        return list("descricao", descricao);
+        return list(CAMPO, descricao);
     }
 
 }
