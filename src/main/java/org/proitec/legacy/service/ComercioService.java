@@ -16,20 +16,19 @@ public class ComercioService {
     Logger log = LoggerFactory.getLogger(ComercioService.class);
     @Inject
     ComercioRepository comercioRepository;
+
     @Transactional
-    public void adicionarComercio(Comercio comercio){
+    public void adicionarComercio(Comercio comercio) {
         comercioRepository.persist(comercio);
     }
-    @Transactional
-    public Comercio buscarPorID(long id){
-        return comercioRepository.findById(id);
+
+    public List<Comercio> buscarPorDescricao(String descricao) {
+        List<Comercio> lista = comercioRepository.findByDescricao(descricao);
+        return lista;
     }
 
-
-    @Transactional
-    public List<Comercio> listAll(){
+    public List<Comercio> listAll() {
         List<Comercio> lista = comercioRepository.listAll();
-        lista.forEach(item -> log.info("{}, {}",item.getId(),item.getDescricao()));
         return lista;
     }
 }

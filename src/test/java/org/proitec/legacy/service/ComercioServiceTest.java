@@ -5,13 +5,19 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.proitec.legacy.model.Comercio;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
+import java.util.Collections;
+import java.util.List;
 
 @QuarkusTest
 public class ComercioServiceTest {
+    Logger log = LoggerFactory.getLogger(ComercioServiceTest.class);
     @Inject
     ComercioService comercioService;
+
 
     @Test
     @Order(1)
@@ -20,9 +26,20 @@ public class ComercioServiceTest {
         Assertions.assertDoesNotThrow(() -> comercioService.adicionarComercio(comercio));
     }
 
+
     @Test
     @Order(2)
     void testaListar() {
         Assertions.assertNotNull(comercioService.listAll());
     }
+
+
+    @Test
+    @Order(3)
+    void testaConsulta() {
+        List<Comercio> comercios = comercioService.buscarPorDescricao("TESTE1");
+        Assertions.assertNotNull(comercios);
+    }
+
+
 }

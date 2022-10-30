@@ -8,7 +8,7 @@ public class Comercio {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
 
-    @Column
+    @Column(name="descricao")
     String descricao;
 
     public Comercio(String descricao) {
