@@ -15,17 +15,13 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Comercio {
+public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
-
-    @Column(name = "descricao")
-    String descricao;
-
-    public Comercio(String descricao) {
-        this.descricao = descricao;
-    }
-
+    @Column
+    String nome;
+    @Column
+    String cpf;
 
 }

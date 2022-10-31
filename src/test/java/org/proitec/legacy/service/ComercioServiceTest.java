@@ -37,7 +37,7 @@ public class ComercioServiceTest {
     @Test
     @Order(3)
     void testaConsulta() {
-        List<Comercio> comercios = comercioService.buscarPorDescricao("TESTE1");
+        List<?> comercios = comercioService.buscarPorDescricao("TESTE1");
         Assertions.assertNotNull(comercios);
     }
 
