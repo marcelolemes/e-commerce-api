@@ -18,8 +18,9 @@ public class ComercioService {
     ComercioRepository comercioRepository;
 
     @Transactional
-    public void adicionarComercio(Comercio comercio) {
+    public boolean adicionarComercio(Comercio comercio) {
         comercioRepository.persist(comercio);
+        return true;
     }
 
     public List<Comercio> buscarPorDescricao(String descricao) {
