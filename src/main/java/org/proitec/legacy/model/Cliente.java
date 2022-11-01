@@ -1,5 +1,6 @@
 package org.proitec.legacy.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -15,6 +16,7 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,5 +25,10 @@ public class Cliente {
     String nome;
     @Column
     String cpf;
+
+    public Cliente(String nome, String cpf) {
+        this.cpf = cpf;
+        this.nome = nome;
+    }
 
 }

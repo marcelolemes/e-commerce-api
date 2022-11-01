@@ -1,7 +1,6 @@
 package org.proitec.legacy.service;
 
 import org.proitec.legacy.model.Cliente;
-import org.proitec.legacy.model.Transacao;
 import org.proitec.legacy.repository.ClienteRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +19,7 @@ public class ClienteService {
 
 
     @Transactional
-    public boolean adicionarComercio(Cliente cliente) {
+    public boolean adicionarCliente(Cliente cliente) {
         clienteRepository.persist(cliente);
         return true;
     }
