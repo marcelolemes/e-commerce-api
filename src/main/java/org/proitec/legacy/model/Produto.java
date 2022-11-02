@@ -24,7 +24,6 @@ public class Produto {
     String descricao;
     @Column
     double valor;
-    @ManyToOne
-    Transacao transacao;
+
 
 }

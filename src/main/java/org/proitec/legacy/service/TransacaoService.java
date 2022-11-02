@@ -20,7 +20,7 @@ public class TransacaoService {
 
 
     @Transactional
-    public boolean adicionarComercio(Transacao transacao) {
+    public boolean adicionarTransacao(Transacao transacao) {
         transacaoRepository.persist(transacao);
         return true;
     }
