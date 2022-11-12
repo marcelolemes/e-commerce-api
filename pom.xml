@@ -42,6 +42,12 @@
       <version>1.18.24</version>
       <scope>provided</scope>
     </dependency>
+    <!-- Elytron Security OAuth2 extension -->
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-elytron-security-oauth2</artifactId>
+    </dependency>
+
     <!-- Hibernate ORM specific dependencies -->
     <dependency>
       <groupId>io.quarkus</groupId>
