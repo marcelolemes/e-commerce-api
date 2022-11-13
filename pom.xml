@@ -43,11 +43,15 @@
       <scope>provided</scope>
     </dependency>
     <!-- Elytron Security OAuth2 extension -->
-    <dependency>
+  <!--  <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-elytron-security-oauth2</artifactId>
+    </dependency> -->
+    <dependency>
+      <!-- Elytron Security File extension -->
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-elytron-security-properties-file</artifactId>
     </dependency>
-
     <!-- Hibernate ORM specific dependencies -->
     <dependency>
       <groupId>io.quarkus</groupId>
