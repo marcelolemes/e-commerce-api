@@ -9,7 +9,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
-import java.util.Collections;
 import java.util.List;
 
 @QuarkusTest
@@ -37,7 +36,7 @@ public class ComercioServiceTest {
     @Test
     @Order(3)
     void testaConsulta() {
-        List<Comercio> comercios = comercioService.buscarPorDescricao("TESTE1");
+        List<?> comercios = comercioService.buscarPorDescricao("TESTE1");
         Assertions.assertNotNull(comercios);
     }
 

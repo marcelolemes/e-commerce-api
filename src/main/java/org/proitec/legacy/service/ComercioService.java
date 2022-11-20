@@ -23,13 +23,11 @@ public class ComercioService {
         return true;
     }
 
-    public List<Comercio> buscarPorDescricao(String descricao) {
-        List<Comercio> lista = comercioRepository.findByDescricao(descricao);
-        return lista;
+    public List<?> buscarPorDescricao(String descricao) {
+        return comercioRepository.findByDescricao(descricao);
     }
 
-    public List<Comercio> listAll() {
-        List<Comercio> lista = comercioRepository.listAll();
-        return lista;
+    public List<?> listAll() {
+        return comercioRepository.listAll();
     }
 }
