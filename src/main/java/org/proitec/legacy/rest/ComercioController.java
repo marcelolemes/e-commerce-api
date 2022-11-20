@@ -30,8 +30,8 @@ public class ComercioController implements ControllerInterface {
     public Response getPorParametro(@PathParam("descricao") String descricao) {
         return Response.ok(comercioService.buscarPorDescricao(descricao)).build();
     }
+
     @POST
-    @Consumes(MediaType.APPLICATION_JSON)
     public Response insert(@Valid Comercio comercio) {
         return Response.ok(comercioService.adicionarComercio(comercio)).build();
     }

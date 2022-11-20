@@ -16,7 +16,7 @@ public class ProdutoService {
     Logger log = LoggerFactory.getLogger(ProdutoService.class);
 
     @Transactional
-    public boolean adicionarComercio(Produto produto) {
+    public boolean adicionarProduto(Produto produto) {
         produtoRepository.persist(produto);
         return true;
     }

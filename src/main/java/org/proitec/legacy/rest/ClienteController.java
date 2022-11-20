@@ -33,7 +33,6 @@ public class ClienteController implements ControllerInterface {
     }
 
     @POST
-    @Consumes(MediaType.APPLICATION_JSON)
     public Response insert(@Valid Cliente cliente) {
         return Response.ok(service.adicionarCliente(cliente)).build();
     }
