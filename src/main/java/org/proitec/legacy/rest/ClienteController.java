@@ -15,7 +15,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 
-@Path("/comercio")
+@Path("/cliente")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class ClienteController implements ControllerInterface {
@@ -28,6 +28,7 @@ public class ClienteController implements ControllerInterface {
     }
 
     @Override
+    @GET
     public Response getPorParametro(String nome) {
         return Response.ok(service.buscarPorNome(nome)).build();
     }
